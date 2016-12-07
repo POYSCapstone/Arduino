@@ -22,6 +22,10 @@ void setup()
 void loop() 
 
 { 
+  delay(20);
+servo2.write(45);
+delay(20);
+servo1.write(20);
 
  int max;
  int val; 
@@ -47,11 +51,11 @@ if(val > 10){
 
 
 
-if(max > 0){
+if(max > 20){
     Serial.print("finmax: ");// 
     Serial.println(max,DEC);// 
 
-if(max>=200){
+if(max>=700){
   Serial.println(max,DEC);// 
   Serial.println("glass");//
 
@@ -59,28 +63,26 @@ if(max>=200){
    servo1.write(170); 
    delay(20);
   
-}else if (max >= 40){
+}else if (max >= 280){
    Serial.println(max,DEC);// 
    Serial.println("plastic");//
     delay(1000);
     servo1.write(90);  
     delay(20);
-}else if (max >= 5  ){
+}else if (max >= 20  ){
   Serial.println(max,DEC);// 
   Serial.println("etc");//
 servo1.write(20); 
 delay(1000); 
 }
 
-delay(2000);
+delay(1000);
 servo2.write(0);
-delay(2000);
-servo2.write(50);
-delay(2000);
-//servo1.write(10); 
-//delay(2000);
+delay(1000);
+servo2.write(45);
+delay(1000);
 servo1.write(20); 
-delay(2000);
+delay(1000);
 }
 
 
